@@ -1,0 +1,39 @@
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
+    id "dev.flutter.flutter-gradle-plugin"
+}
+
+android {
+    namespace = "com.example.project" // เปลี่ยนให้ตรงกับ package name ของคุณ
+    compileSdk = 34 // อัปเดตเป็นเวอร์ชันล่าสุด
+    ndkVersion = flutter.ndkVersion
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8
+    }
+
+    defaultConfig {
+        applicationId = "com.example.project" // เปลี่ยนให้ตรงกับ package name ของคุณ
+        minSdk = 21 // ตั้งค่านี้ให้เป็น 21 หรือสูงกว่า
+        targetSdk = 34 // อัปเดตเป็นเวอร์ชันล่าสุด
+        versionCode = flutter.versionCode
+        versionName = flutter.versionName
+    }
+
+    buildTypes {
+        release {
+            signingConfig = signingConfigs.debug
+        }
+    }
+}
+
+flutter {
+    source = "../.."
+}
