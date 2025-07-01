@@ -3,7 +3,7 @@ import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:google_place/google_place.dart';
 import 'package:permission_handler/permission_handler.dart';
 
-const String apiKey = 'AIzaSyCMTAXM5U34Z_m__AGyP0Z3TMH-xW2RX-g';
+const String apiKey = 'xxxxxxxxxxxxxxxx';
 
 class PinMap extends StatefulWidget {
   const PinMap({super.key});
